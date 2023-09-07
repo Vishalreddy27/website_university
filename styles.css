@@ -1,0 +1,171 @@
+/* Reset default margin and padding */
+body, h1, h2, h3, ul, li, p, form {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set a background image/color */
+body {
+    background: url('index_background.png') no-repeat center center fixed; 
+    background-size: contain ;
+    background-color: #f5f5f5; /* Fallback background color */
+    color: #333; /* Default text color */
+    font-family: Arial, sans-serif; /* Default font */
+    min-height: 100vh; /* Ensure the body fills the viewport height */
+    display: flex;
+    flex-direction: column;
+}
+.background-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 90%;
+    z-index: -1;
+    background: url('index_background.png') center center;
+    background-size:cover; /* Ensure the background image covers the entire container */
+    animation: slideBackground 30s linear infinite;
+}
+
+@keyframes slideBackground {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 0%;
+    }
+}
+header {
+    background: #1b03ef5d; /* Header background color */
+    /* text-align: center; */
+    padding: 20px;
+    display: flex;
+    /* justify-content: center;  */
+    align-items: center; /* Center vertically */
+}
+
+.logo {
+    width: 100px; /* Adjust the width to your logo size */
+    height: 100px; /* Maintain aspect ratio */
+    margin-right: 20px; /* Add space between logo and college name */
+    border-radius: 50px;
+}
+
+.college-name {
+    font-size: 36px;
+    margin: 0; /* Remove default margin to align with logo */
+}
+
+section ul li a{
+    text-decoration: none;
+    color:rgb(100, 28, 0);
+    background-color:whitesmoke;
+    padding: 5px;
+    border-radius: 10px;
+    margin:10px;
+}
+section ul li{
+    padding: 10px;
+}
+/* Header styles */
+
+
+header h1 {
+    font-size: 36px;
+    text-align: center;
+    justify-content:center;
+}
+
+/* Navigation styles */
+nav {
+    background: #eef1d184; /* Nav background color */
+    text-align: center;
+}
+nav ul li a:hover {
+    color: #12f364; /* Nav link color */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+
+nav ul {
+    list-style: none;
+    padding: 10px;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #e66d6d; /* Nav link color */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Main content styles */
+main {
+    flex-grow: 1; /* Allow the main content to grow and fill the remaining space */
+    padding: 20px;
+}
+
+section {
+    background: #1b03ef4f; /* Semi-transparent background color for content */
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+/* Footer styles */
+footer {
+    height: 50px;
+    background:#1b03ef5d; /* Footer background color */
+    text-align: center;
+    padding: 10px;
+    color:rgb(100, 28, 0);; /* Footer text color */
+}
+/* styles.css */
+
+/* Style for the photo gallery section */
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    grid-template-rows: repeat(3, auto); /* Three rows */
+    gap: 20px; /* Adjust the gap between images as needed */
+}
+
+/* Style for each photo */
+.photo {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%; /* Maintain aspect ratio */
+    object-fit: cover; /* Crop and center the image */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Add a slight zoom effect on hover */
+.photo:hover img {
+    transform: scale(1.05);
+}
+/* styles.css */
+
+/* Increase font size for the description */
+.description {
+    font-size: 18px; /* Adjust the size to your preference */
+}
+footer p{
+    margin-top: 15px;
+}
